@@ -77,6 +77,12 @@ case "$model" in
   u-boot-update || true
   checkReboot
   ;;
+*"Radxa ROCK 3A"*)
+  # TODO
+  # /boot/dtb-6.18.10-current-rockchip64/rockchip/overlay/rockchip-rk3588-pwm15-m0.dtbo
+  u-boot-update || true
+  checkReboot
+  ;;
 *"Radxa ROCK 4SE"* | *"ROCK Pi 4"*)
   if [ "$(is_armbian)" = "true" ]; then
     cp /usr/bin/rockpi-penta/overlays/rk3399-pwm1.dtbo /boot/dtb/rockchip/overlay/rockchip-rk3399-pwm1-by-rockpi-penta.dtbo
